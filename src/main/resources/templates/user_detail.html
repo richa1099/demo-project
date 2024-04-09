@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        table, th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+
+        th {
+          background-color: #f2f2f2;
+        }
+
+        a {
+          text-decoration: none;
+          color: #007bff;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        form {
+          margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="email"] {
+          padding: 10px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #45a049;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<h2>User Detail</h2>
+<div>
+    <label>ID:</label> <span th:text="${user.id}">1</span><br>
+    <label>Name:</label> <span th:text="${user.name}">Name</span><br>
+    <label>Email:</label> <span th:text="${user.email}">Email</span><br>
+</div>
+<div>
+    <a th:href="@{/}">Back to List</a>
+</div>
+</body>
+</html>
